@@ -1,0 +1,43 @@
+String Functions:
+
+Substring:
+Syntax: string.substring(startIndex, endIndex)
+Description: Returns a substring starting from startIndex to endIndex 
+
+Concatenation:
+Syntax: string1.concat(string2, string3, ...)
+Description: Concatenates two or more strings.
+
+Joining Array Elements into a String:
+Syntax: array.join(separator)
+Description: Joins elements of an array into a string using the specified separator.
+
+Array Functions:
+Push:
+Syntax: array.push(element1, element2, ...)
+Description: Adds one or more elements to the end of the array and returns the new length of the array.
+
+Pop:
+Syntax: array.pop()
+Description: Removes the last element from the array and returns that element.
+
+Shift:
+Syntax: array.shift()
+Description: Removes the first element from the array and returns that element, shifting the remaining elements.
+
+Unshift:
+Syntax: array.unshift(element1, element2, ...)
+Description: Adds one or more elements to the beginning of the array and returns the new length of the array.
+
+Slice:
+Syntax: array.slice(startIndex, endIndex)
+Description: Returns a shallow copy of a portion of the array between startIndex and endIndex - 1.
+
+Sort:
+Syntax: array.sort(compareFunction)
+Description: Sorts the elements of the array in place based on the provided compareFunction.
+
+Splice:
+Syntax: array.splice(startIndex, deleteCount, element1, element2, ...)
+Description: Removes or replaces elements starting from startIndex and optionally inserts new elements.
+ 

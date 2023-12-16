@@ -1,0 +1,68 @@
+SELECT - Retrieve Data
+Syntax: SELECT columns FROM table WHERE condition;
+
+INSERT - Add Data
+Syntax: INSERT INTO table (columns) VALUES (values);
+
+UPDATE - Modify Data
+Syntax: UPDATE table SET column = value WHERE condition;
+
+DELETE - Remove Data
+Syntax: DELETE FROM table WHERE condition;
+
+CREATE TABLE - Create a New Table
+Syntax: CREATE TABLE table (columns);
+
+ALTER TABLE - Modify Existing Table
+Syntax: ALTER TABLE table ADD column datatype;
+
+DROP TABLE - Delete a Table
+Syntax: DROP TABLE table;
+
+CREATE DATABASE - Create a New Database
+Syntax: CREATE DATABASE database;
+
+USE DATABASE - Switch to a Database
+Syntax: USE database;
+ALTER DATABASE - Modify Database Properties
+Syntax: ALTER DATABASE database MODIFY NAME = new_database;
+
+DROP DATABASE - Delete a Database
+Syntax: DROP DATABASE database;
+
+CREATE INDEX - Create an Index
+Syntax: CREATE INDEX index ON table (columns);
+
+DROP INDEX - Delete an Index
+Syntax: DROP INDEX index;
+
+
+SELECT DISTINCT - Retrieve Unique Values
+Syntax: SELECT DISTINCT column FROM table;
+
+ORDER BY - Sort Query Results
+Syntax: SELECT * FROM table ORDER BY column ASC/DESC;
+
+GROUP BY - Group Data
+Syntax: SELECT column, COUNT(*) FROM table GROUP BY column;
+
+HAVING - Filter Grouped Data
+Syntax: SELECT column, COUNT(*) FROM table GROUP BY column HAVING COUNT(*) > 1;
+
+JOIN - Combine Data from Multiple Tables
+Syntax: SELECT t1.column, t2.column FROM table1 t1 INNER JOIN table2 t2 ON t1.common = t2.common;
+
+UNION - Combine Results of SELECT Statements
+Syntax: SELECT column FROM table1 UNION SELECT column FROM table2;
+
+COMMIT - Save Transaction Changes                                                             
+Syntax: COMMIT;
+
+ROLLBACK - Revert Transaction Changes
+Syntax: ROLLBACK;
+
+GRANT - Give Permissions
+Syntax: GRANT permission ON object TO user;
+
+REVOKE - Remove Permissions
+Syntax: REVOKE permission ON object FROM user;

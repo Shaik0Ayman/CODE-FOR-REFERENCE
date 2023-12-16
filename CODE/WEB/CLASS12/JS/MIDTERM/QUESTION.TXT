@@ -1,0 +1,268 @@
+//1. program to print prime numbers between the two numbers
+
+lowerNumber = parseInt(prompt('Enter lower number: '))
+higherNumber = parseInt(prompt('Enter higher number: '));
+
+for (let i = lowerNumber; i <= higherNumber; i++) {
+    let flag = 0;
+
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (i > 1 && flag == 0) {
+        console.log(i);
+    }
+}
+
+//2.  program to check an Armstrong number of three digits
+
+let sum = 0;
+const number = prompt('Enter a three-digit positive integer: ');
+let temp = number;
+while (temp > 0) {
+    let remainder = temp % 10;
+    sum += remainder * remainder * remainder;
+    temp = parseInt(temp / 10); 
+}
+if (sum == number) {
+    console.log(`${number} is an Armstrong number`);
+}
+else {
+    console.log(`${number} is not an Armstrong number.`);
+}
+
+//3.  program to find the factorial of a number
+
+const number = parseInt(prompt('Enter a positive integer: '));
+if (number < 0) {
+    console.log('Error! Factorial for negative number does not exist.');
+}
+else if (number === 0) {
+    console.log(`The factorial of ${number} is 1.`);
+}
+else {
+    let fact = 1;
+    for (i = 1; i <= number; i++) 
+    {
+        fact *= i;
+    }
+    console.log(`The factorial of ${number} is ${fact}.`);
+}
+
+4. // program to generate fibonacci series up to n terms
+const number = parseInt(prompt('Enter the number of terms: '));
+let n1 = 0, n2 = 1, nextTerm;
+console.log('Fibonacci Series:');
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+
+
+5. // program to find the factors of an integer
+
+const num = prompt('Enter a positive number: ');
+console.log(`The factors of ${num} is:`);
+for(let i = 1; i <= num; i++) {
+    if(num % i == 0) {
+        console.log(i);
+    }
+}
+
+
+
+6. // program to check the number of occurrence of a character
+
+function countString(str, letter) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) 
+  {
+       if (str.charAt(i) == letter) {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+const string = prompt('Enter a string: ');
+const letterToCheck = prompt('Enter a letter to check: ');
+const result = countString(string, letterToCheck);
+console.log(result);
+
+
+7.// Form validaion
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+
+function validate()
+{
+var b=document.frm1.txtEmail.value;
+var len=b.length;
+var a='@';
+var dot='.';
+var valid1,valid2;
+
+//form validation for First Name
+
+if(document.frm1.txtFirstName.value=="")
+{
+alert("The First Name is Empty");
+document.frm1.txtFirstName.focus();
+return false;
+}
+
+// form validation for Last Name
+
+else if(document.frm1.txtLastName.value=="")
+{
+alert("The Last Name is Empty");
+document.frm1.txtLastName.focus();
+return false;
+}
+
+//form validation for Gender
+else if(document.frm1.optGender[0].checked==false && document.frm1.optGender[1].checked==false)
+{
+alert("Check for the Gender option");
+return false;
+}
+
+//form validation for Phone no
+else if(document.frm1.txtPhone.value=="")
+{
+alert("The Phone no field is Empty");
+document.frm1.txtPhone.focus();
+return false;
+}
+
+//for checking numbers in Phone no field
+else if(isNaN(document.frm1.txtPhone.value))
+{
+alert("Please enter the valid numbers");
+document.frm1.txtPhone.focus();
+return false;
+}
+
+//validation for Comment
+else if(document.frm1.txtcomment.value=="")
+{
+alert("The comment field is empty");
+document.frm1.txtcomment.focus();
+return false;
+}
+
+//validation for Email
+else if(document.frm1.txtEmail.value=="")
+{
+alert("The Email field is empty");
+document.frm1.txtEmail.focus();
+return false;
+}
+
+//validation for correct email
+else if(b!="")
+{
+for(var i=0;i<=len;i++)
+{
+if(b.charAt(0)!=a)
+{
+if(b.charAt(i)==a)
+valid1=true;
+if(b.charAt(i)==dot)
+{
+valid2=true;
+}
+}
+else
+{
+alert("EnterValidEmail address");
+document.frm1.txtEmail.focus();
+}
+}
+if(valid1!=true || valid2!=true)
+{
+alert("Please enter the valid email");
+document.frm1.txtEmail.focus();
+return false;
+}
+}
+
+}
+</script>
+</head>
+
+<body>
+<form name="frm1">
+<table border=1 align="center">
+<tr align>
+<td>First name:</td>
+<td colspan=2><input type="textbox" name="txtFirstName"></td>
+</tr>
+<tr align>
+<td>Last name:</td>
+<td colspan=2><input type="text" name="txtLastName"></td>
+</tr>
+<tr align="center">
+<td>Gender:</td>
+<td><input type="radio"name="optGender">Male</td>
+<td><input type="radio" name="optGender">Female</td>
+</tr>
+<tr align="center">
+<td>Phone no:</td>
+<td colspan=2><input type="text" name="txtPhone"></td>
+</tr>
+<tr align="center">
+<td>Email:</td>
+<td colspan=2><input type="text" name="txtEmail"></td>
+</tr>
+<tr align="center">
+<td>Comments:</td>
+<td colspan=2><input type="textarea" name="txtcomment" row=5 col=3></td>
+</tr>
+<tr align="center">
+<td colspan=3><input type="submit" value="Submit" onclick="return(validate())"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+8. //To Print Series of Square of numbers for nth series 1+4+9+16+ …….+n
+<html>
+<head>
+<title>JavaScript program to Find the Sum of given series</title>
+</head>
+<body>
+<table>
+<tr>
+<td> <input type="text" name="a" id="first" placeholder="Enter any number"> </td>
+</tr>
+<tr>
+<td> <button onclick="series2 ()" >Submit</button> </td>
+</tr>
+</table>
+</body>
+<script type="text/javascript">
+function series2()
+{
+var n,i,sum = 0,j;
+n = parseInt(document.getElementById ("first").value);
+document.write("Series till the enter number:</br>");
+for(i = 1; i <= n; i++ )
+{
+j = i*i;
+sum = sum+(j);
+document.write(j + " ");
+}
+document.write("</br>Sum of the series : "+sum);
+}
+</script>
+</html>

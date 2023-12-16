@@ -1,0 +1,38 @@
+<html>
+
+
+<head>
+    <script>
+        function hi() {
+            choice = parseInt(prompt("Input 1/2/3"));
+            switch (choice) {
+                case 1:
+                    if (document.getElementById('myImage').src = "pic2.jpg") {
+                        document.getElementById('myImage').src = "img1.jpg"
+                    }
+                    break;
+                case 2:
+                    if (document.getElementById('myImage1').src = "Green.png") {
+                        document.getElementById('myImage1').src = "img2.jpg"
+                    }
+                    break;
+                case 3:
+                    if (document.getElementById('myImage2').src = "red.png") {
+                        document.getElementById('myImage2').src = "img3.jpg"
+                    }
+                    break;
+            }
+        } 
+    </script>
+</head>
+
+<body>
+    <center>
+        <img src="pic2.jpg" width="200" height="200" Id="myImage">
+        <img src="Green.png" width="200" height="200" Id="myImage1">
+        <img src="red.png" width="200" height="200" Id="myImage2">
+        <form>
+            <input type="button" value="Enter Your Choice to open a pic" onclick="hi()"> </input>
+</body>
+
+</html>

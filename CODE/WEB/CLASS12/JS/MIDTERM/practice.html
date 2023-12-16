@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            WEBPAGE
+        </title>
+    <body bgcolor="darkmagenta">
+        <h1>
+            Javascript
+        </h1>
+        
+        <script>
+            document.write("<h2>","js operators","<h2>");
+            function get() {
+                var x = document.getElementById("demo"); 
+                x.innerHTML = "boom!";         
+
+            }
+            
+
+            function test() {
+                alert("operator : &&");    
+
+            }
+            function test1() {
+                alert("operator : ||");    
+
+            }
+        </script>
+        <button onclick="confirm('why')">
+            <h4>
+                click
+            </h4>
+        </button>
+        <button onclick="test()">
+            <h4>
+                and operator
+            </h4>
+        </button>
+        
+        <button  onlick="test1()">
+            <h4>
+                or operator
+            </h4>
+        </button>
+        
+        <button onclick="alert('operator: !')">
+            <h4>
+                not operator
+            </h4>
+        </button>
+        <button onmouseout="confirm('why')">
+            <h4>
+                out
+            </h4>
+        </button>
+        <h2>
+            test buttons
+        </h2>
+        <p id="demo">
+            text will be modified
+        </p>
+        <button ondblclick="get()">
+            <h4>
+                double click to change text above
+            </h4>
+        </button>
+        <button onmouseover="location.reload()">
+            <h4>
+                hover to refresh
+            </h4>
+        </button>
+
+
+    </body>
+</head>

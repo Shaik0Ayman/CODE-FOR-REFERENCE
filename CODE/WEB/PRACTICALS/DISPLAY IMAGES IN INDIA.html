@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function getimage() {
+            var imag = ["Top1.webp", "Shimla.webp", "Goa.webp", "Mumbai.webp", "Varanasi.jpg"]
+            var i = 0;
+            var c = parseInt(prompt("Enter the no of pic to be displayed(1..5)"));
+            do {
+                document.write("<img src=" + imag[i] + " " + "height='300' width='350'" + ">");
+                i++;
+            } while (i < c)
+        }
+    </script>
+
+<body>
+    <h2>
+        <center>
+            <font color="Maroon">Top 5 Most Beautiful Places to Visit in
+                India</font>
+        </center>
+    </h2>
+    <hr>
+    <center><img style="border:10px outset silver;" src="asia.png"></img><br><br><br>
+        <center>
+            <button onclick="getimage()">DISPLAY PICTURE </button>
+</body>
+</html>

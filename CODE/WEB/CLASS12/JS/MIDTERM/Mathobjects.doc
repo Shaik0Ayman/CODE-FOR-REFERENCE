@@ -1,0 +1,49 @@
+Math objects:
+
+Absolute Value:
+Syntax: Math.abs(x)
+Description: Returns the absolute value of x.
+
+Rounding:
+Syntax: Math.round(x)
+Description: Rounds x to the nearest integer.
+
+Ceiling (Smallest Integer Greater Than or Equal To):
+Syntax: Math.ceil(x)
+Description: Returns the smallest integer that is greater than or equal to x.
+
+Floor (Largest Integer Less Than or Equal To):
+Syntax: Math.floor(x)
+Description: Returns the largest integer that is less than or equal to x.
+
+Exponential (e^x):
+Syntax: Math.exp(x)
+Description: Returns the value of e raised to the power of x.
+
+Natural Logarithm (Base e):
+Syntax: Math.log(x)
+Description: Returns the natural logarithm (base e) of x.
+
+Logarithm (Base 10):
+Syntax: Math.log10(x)
+Description: Returns the base 10 logarithm of x.
+
+Power:
+Syntax: Math.pow(base, exponent)
+Description: Returns base raised to the power of exponent.
+
+Random Number (Between 0 and 1):
+Syntax: Math.random()
+Description: Returns a pseudo-random number between 0 (inclusive) and 1 (exclusive).
+
+Square Root:
+Syntax: Math.sqrt(x)
+Description: Returns the square root of x.
+
+Minimum Value:
+Syntax: Math.min(x1, x2, x3, ...)
+Description: Returns the smallest of the provided values.
+
+Maximum Value:
+Syntax: Math.max(x1, x2, x3, ...)
+Description: Returns the largest of the provided values.
