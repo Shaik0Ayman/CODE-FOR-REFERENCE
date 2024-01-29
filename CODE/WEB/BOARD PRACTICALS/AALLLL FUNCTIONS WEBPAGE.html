@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Number Functions</h2>
+
+<button onclick="checkArmstrongNumber()">Check Armstrong Number</button>
+<button onclick="calculateFactorial()">Calculate Factorial</button>
+<button onclick="generateFibonacciSeries()">Generate Fibonacci Series</button>
+<button onclick="checkPalindromeNumber()">Check Palindrome Number</button>
+<button onclick="checkPrimeNumber()">Check Prime Number</button>
+<button onclick="checkPerfectNumber()">Check Perfect Number</button>
+<button onclick="findSumOfOddAndEven()">Find Sum of Odd and Even Numbers</button>
+
+<script>
+/* Your JavaScript functions go here */
+
+/*ARMSTRONG NUMBER*/
+function isArmstrongNumber(number) {
+    // Your Armstrong number logic goes here
+}
+
+/*FACTORIAL NUMBER*/
+function factorial(number) {
+    // Your factorial logic goes here
+}
+
+/*FIBONACCI NUMBER*/
+function generateFibonacciSeries(start, end) {
+    // Your Fibonacci series logic goes here
+}
+
+/*PALINDROME NUMBER*/
+function isPalindromeNumber(number) {
+    // Your palindrome number logic goes here
+}
+
+/*PRIME NUMBER*/
+function isPrimeNumber(number) {
+    // Your prime number logic goes here
+}
+
+/*PERFECT NUMBER*/
+function isPerfectNumber(number) {
+    // Your perfect number logic goes here
+}
+
+/*SUM ODD EVEN*/
+function findSumOfOddAndEven(s, e) {
+    // Your sum of odd and even numbers logic goes here
+}
+
+/* Button click functions */
+function checkArmstrongNumber() {
+    let number = prompt("Enter a number:");
+    alert(isArmstrongNumber(number) ? "It is an Armstrong number." : "It is not an Armstrong number.");
+}
+
+function calculateFactorial() {
+    let number = prompt("Enter a number:");
+    alert("The factorial of the number is " + factorial(number));
+}
+
+function generateFibonacciSeries() {
+    let start = prompt("Enter the start of the series:");
+    let end = prompt("Enter the end of the series:");
+    alert("The Fibonacci series is " + generateFibonacciSeries(start, end));
+}
+
+function checkPalindromeNumber() {
+    let number = prompt("Enter a number:");
+    alert(isPalindromeNumber(number) ? "It is a palindrome number." : "It is not a palindrome number.");
+}
+
+function checkPrimeNumber() {
+    let number = prompt("Enter a number:");
+    alert(isPrimeNumber(number) ? "It is a prime number." : "It is not a prime number.");
+}
+
+function checkPerfectNumber() {
+    let number = prompt("Enter a number:");
+    alert(isPerfectNumber(number) ? "It is a perfect number." : "It is not a perfect number.");
+}
+
+function findSumOfOddAndEven() {
+    let s = prompt("Enter the start of the range:");
+    let e = prompt("Enter the end of the range:");
+    let [oddSum, evenSum] = findSumOfOddAndEven(s, e);
+    alert("The sum of odd numbers is " + oddSum + " and the sum of even numbers is " + evenSum);
+}
+</script>
+
+</body>
+</html>
