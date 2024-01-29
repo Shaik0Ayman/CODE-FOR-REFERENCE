@@ -162,3 +162,102 @@ const e = 10;
 const [oddSum, evenSum] = findSumOfOddAndEven(start, end);
 console.log("Sum of odd numbers:", oddSum);
 console.log("Sum of even numbers:", evenSum);
+ /*MOCK PRACTICAL QUESTIONS*/
+/* Write a JavaScript code to add an element at the end of the array and delete a first element in the array and find length of an array. */ 
+function modifyArray(array, element) {
+    // Add the element to the end of the array
+    array.push(element);
+
+    // Remove the first element of the array
+    array.shift();
+
+    // Return the length of the array
+    return array.length;
+}
+let array = [1, 2, 3, 4, 5];
+let element = 6;
+let length = modifyArray(array, element);
+console.log("Modified array:", array);
+console.log("Length of array:", length);
+
+
+/* WAP to find and display the factors of a given number. */
+function findFactors(number) {
+    let factors = [];
+    for (let i = 1; i <= number; i++) {
+        if (number % i === 0) {
+            factors.push(i);
+        }
+    }
+    return factors;
+}
+
+let number = 12;
+let factors = findFactors(number);
+console.log("Factors of", number + ":", factors);
+
+
+
+/* Write a JavaScript code for the following pattern. 
+***** 
+***** 
+***** 
+***** 
+***** */
+function printPattern(rows, columns) {
+    let pattern = '';
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < columns; j++) {
+            pattern += '*';
+        }
+        pattern += '\n';
+    }
+    return pattern;
+}
+
+let rows = 5;
+let columns = 5;
+let pattern = printPattern(rows, columns);
+console.log(pattern);
+
+/* Write a program to find and display the number of occurrences of a given 
+character from a string. */
+function countOccurrences(str, char) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
+
+let string = "Hello, world!";
+let character = "o";
+let occurrences = countOccurrences(string, character);
+console.log("Number of occurrences of", character + ":", occurrences);
+
+
+/* WAP to convert kilometres to miles and vice versa based on user’s choice. */
+function convertDistance(distance, unit) {
+    if (unit === "km") {
+        return distance * 0.621371; // Convert kilometers to miles
+    } else if (unit === "mi") {
+        return distance * 1.60934; // Convert miles to kilometers
+    } else {
+        return "Invalid unit";
+    }
+}
+
+let distance = 10;
+let unit = "km";
+let convertedDistance = convertDistance(distance, unit);
+console.log(distance + " " + unit + " is equal to " + convertedDistance + " miles");
+
+distance = 5;
+unit = "mi";
+convertedDistance = convertDistance(distance, unit);
+console.log(distance + " " + unit + " is equal to " + convertedDistance + " kilometers");
+
+
+
