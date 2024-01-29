@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>PRIME NUMBER</title>
+    </head>
+    <body>
+        <form method="post">
+            <label>Enter a number(to check if prime number or not):</label>
+            <input type="number" name="number" />
+            <input type="submit" value="Submit" />
+        </form>
+        
+        <script type="text/javascript">
+            
+            function isPrimeNumber(number) {
+                // Check if the number is 1
+                if (number === 1) {
+                    return false;
+                }
+                
+                // Check if the number is 2
+                if (number === 2) {
+                    return true;
+                }
+                
+                // Check if the number is even
+                if (number % 2 === 0) {
+                    return false;
+                }
+                
+                // Check if the number is divisible by any odd number
+                for (let i = 3; i < number; i += 2) {
+                    if (number % i === 0) {
+                        return false;
+                    }
+                }
+                
+                // If the number is not divisible by any odd number, it is a prime number
+                return true;
+            }
+            document.querySelector('form').addEventListener('submit', function(event) {
+                // Prevent the form from being submitted
+                event.preventDefault();
+
+                // Get the number from the input field
+                var number = document.querySelector('input[name="number"]').value;
+
+                // Call the isPrimeNumber function
+                var result = isPrimeNumber(number);
+
+                // Log the result
+                console.log(result);
+            });
+        </script>   
+    </body>
+</html>

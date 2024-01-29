@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            PERFECT NUMBER
+        </title>
+    </head>
+    <body>
+        <form method="post">
+            <label>Enter a number(to check if perfect number or not):</label>
+            <input type="number" name="number" />
+            <input type="submit" value="Submit" />
+        </form>
+        <script type="text/javascript">
+            function isPerfectNumber(number) {
+                // Calculate the sum of the factors
+                let sum = 0;
+                for (let i = 1; i < number; i++) {
+                    if (number % i === 0) {
+                        sum += i;
+                    }
+                }
+                // Check if the sum is equal to the original number
+                if (sum === number) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            document.querySelector('form').addEventListener('submit', function(event) {
+                // Prevent the form from being submitted
+                event.preventDefault();
+                // Get the number from the input field
+                var number = document.querySelector('input[name="number"]').value;
+                // Call the isPerfectNumber function
+                var result = isPerfectNumber(number);
+                // Log the result
+                console.log(result);
+            });
+        </script>
+</html>

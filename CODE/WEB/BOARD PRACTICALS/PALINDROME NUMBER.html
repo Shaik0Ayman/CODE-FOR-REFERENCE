@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            PALINDROME NUMBER
+        </title>
+    </head>
+    <body>
+        <form method="post">
+            <label>Enter a number(to check if palindrome number or not):</label>
+            <input type="number" name="number" />
+            <input type="submit" value="Submit" />
+        </form>
+        <script type="text/javascript">
+            function isPalindromeNumber(number) {
+                let reversed = 0;
+                let original = number;
+                while (number > 0) {
+                    let digit = number % 10;
+                    reversed = reversed * 10 + digit;
+                    number = Math.floor(number / 10);
+                }
+                return original === reversed;
+            }
+            document.querySelector('form').addEventListener('submit', function(event) {
+                // Prevent the form from being submitted
+                event.preventDefault();
+                // Get the number from the input field
+                var number = document.querySelector('input[name="number"]').value;
+                // Call the isPalindromeNumber function
+                var result = isPalindromeNumber(number);
+                // Log the result
+                console.log(result);
+            });
+        </script>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>  
+        <title>
+            SUM ODD EVEN
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function findSumOfOddAndEven(start, end) {
+                let oddSum = 0;
+                let evenSum = 0;
+                for (let i = start; i <= end; i++) {
+                    if (i % 2 === 0) {
+                        evenSum += i;
+                    } else {
+                        oddSum += i;
+                    }
+                }
+                return [oddSum, evenSum];
+            }
+            const start = 1;
+            const end = 10;
+            const [oddSum, evenSum] = findSumOfOddAndEven(start, end);
+            console.log("Sum of odd numbers:", oddSum);
+            console.log("Sum of even numbers:", evenSum);
+        </script>
+</html>

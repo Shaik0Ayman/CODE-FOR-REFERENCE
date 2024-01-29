@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Armstrong Number</title> 
+    </head>
+    <body>
+        <form method="post">
+            <label>Enter a number(to check if armstrong number or not):</label>
+            <input type="number" name="number" />
+            <input type="submit" value="Submit" />
+        </form>
+        
+        <script type="text/javascript">
+            
+            function isArmstrongNumber(number) {
+                // Convert the number to a string
+                const numString = number.toString();
+                
+                // Get the length of the number
+                const length = numString.length;
+                
+                // Calculate the sum of the digits raised to the power of the length
+                let sum = 0;
+                for (let i = 0; i < length; i++) {
+                    sum += Math.pow(parseInt(numString[i]), length);
+                }
+                
+                // Check if the sum is equal to the original number
+                if (sum === number) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            document.querySelector('form').addEventListener('submit', function(event) {
+                // Prevent the form from being submitted
+                event.preventDefault();
+
+                // Get the number from the input field
+                var number = document.querySelector('input[name="number"]').value;
+
+                // Call the isArmstrongNumber function
+                var result = isArmstrongNumber(number);
+
+                // Log the result
+                console.log(result);
+            });
+        </script>
+    </body>
+</html>
+            
